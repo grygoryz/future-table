@@ -1,0 +1,21 @@
+.btn {
+  padding: 10px 45px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+  transition: transform 0.2s;
+  font-size: 18px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &_disabled {
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 0.2;
+    }
+  }
+}

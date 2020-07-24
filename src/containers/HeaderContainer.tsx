@@ -5,19 +5,22 @@ import {useLocation} from "react-router-dom";
 import {TableActions} from "../actions/TableActions";
 import {TableItem} from "../types/types";
 
-const HeaderContainer: React.FC<Props> = ({addItem}) => {
+const HeaderContainer: React.FC<Props> = ({setEditMode, addItem}) => {
     const location = useLocation();
     const disabled = location.pathname !== "/table";
 
-    return <Header disabled={disabled} />;
+    const onClick = () => setEditMode(true);
+
+    return <Header disabled={disabled} onClick={onClick}/>;
 };
 
-const dispatchProps = {addItem: TableActions.addItem};
+const dispatchProps = {addItem: TableActions.addItem, setEditMode: TableActions.setEditMode};
 
 export default connect(null, dispatchProps)(HeaderContainer);
 
 type MapDispatchProps = {
     addItem: (item: TableItem) => void
+    setEditMode: (value: boolean) => void
 }
 
 type Props = MapDispatchProps

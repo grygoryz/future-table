@@ -1,7 +1,10 @@
 .container {
+  position: fixed;
+  width: 100%;
   padding: 10px 15px;
   border: 1px solid black;
   display: flex;
   justify-content: flex-end;
+  background-color: white;
 }
 

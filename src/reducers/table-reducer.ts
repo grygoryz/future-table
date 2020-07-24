@@ -1,9 +1,17 @@
 import {TableData} from "../types/types";
-import {FETCH_DATA_FAILURE, FETCH_DATA_SUCCESS, ADD_ITEM, ActionsType, FETCH_DATA} from "../actions/TableActions";
+import {
+    ActionsType,
+    ADD_ITEM,
+    FETCH_DATA,
+    FETCH_DATA_FAILURE,
+    FETCH_DATA_SUCCESS,
+    SET_EDIT_MODE
+} from "../actions/TableActions";
 
 const initialState = {
     data: null as null | TableData,
-    isFetching: false
+    isFetching: false,
+    editMode: false
 };
 
 export const tableReducer = (state = initialState, action: ActionsType): State => {
@@ -16,6 +24,9 @@ export const tableReducer = (state = initialState, action: ActionsType): State =
         }
         case FETCH_DATA_FAILURE: {
             return {...state, data: null, isFetching: false}
+        }
+        case SET_EDIT_MODE: {
+            return {...state, editMode: action.value}
         }
         case ADD_ITEM: {
             return{...state, data: [action.item, ...state.data!]}

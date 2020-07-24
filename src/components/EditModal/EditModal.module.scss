@@ -8,16 +8,18 @@
 
 .window {
   position: absolute;
-  border: 5px solid #aec8ff;
+  border: 5px solid gray;
   left: 50%;
   top: 15%;
   transform: translateX(-50%);
-  width: 500px;
+  width: 400px;
   background-color: white;
   border-radius: 15px;
   padding: 15px 20px;
 }
 
 .title {
-
+  text-align: center;
+  font-size: 23px;
+  margin-bottom: 15px;
 }

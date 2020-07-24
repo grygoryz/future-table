@@ -6,11 +6,13 @@ export const FETCH_DATA = "FETCH_DATA";
 export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
 export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 export const ADD_ITEM = "ADD_ITEM";
+export const SET_EDIT_MODE = "SET_EDIT_MODE";
 
 export const TableActions = {
     fetchData: () => ({type: FETCH_DATA} as const),
     fetchDataSuccess: (data: TableData) => ({type: FETCH_DATA_SUCCESS, data} as const),
     fetchDataFailure: () => ({type: FETCH_DATA_FAILURE} as const),
+    setEditMode: (value: boolean) => ({type: SET_EDIT_MODE, value} as const),
     addItem: (item: TableItem) => ({type: ADD_ITEM, item} as const)
 };
 

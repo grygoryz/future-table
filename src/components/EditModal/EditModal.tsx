@@ -1,13 +1,22 @@
 import React from "react";
 import c from "./EditModal.module.scss";
+import EditForm from "./EditForm/EditForm";
 
-const EditModal: React.FC = () => {
+type Props = {
+    closeModal: () => void
+}
+
+const EditModal: React.FC<Props> = ({closeModal}) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        const target = e.target as HTMLDivElement;
+        if (target.className === c.container) closeModal();
+    };
 
     return (
-        <div className={c.container}>
+        <div onClick={onClick} className={c.container}>
             <div className={c.window}>
                 <div className={c.title}>Create new item:</div>
-
+                <EditForm onSubmit={() => console.log("SUBMITTED")}/>
             </div>
         </div>
     );

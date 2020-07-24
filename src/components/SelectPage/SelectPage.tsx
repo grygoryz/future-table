@@ -10,7 +10,7 @@ const SelectPage: React.FC<Props> = ({onSubmit}) => {
     return (
         <div className={c.container}>
             <div className={c.title}>Select dataset size and press load.</div>
-            <SelectForm initialValues={{datasetSize: "small"}}  onSubmit={onSubmit}/>
+            <SelectForm initialValues={{datasetSize: "big"}}  onSubmit={onSubmit}/>
         </div>
     );
 };

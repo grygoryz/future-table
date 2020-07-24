@@ -7,15 +7,16 @@ import Preloader from "../components/common/Preloader/Preloader";
 import { Redirect } from "react-router-dom";
 import EditModal from "../components/EditModal/EditModal";
 import {TableActions} from "../actions/TableActions";
+import EditModalContainer from "./EditModalContainer";
 
-const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode, setEditMode}) => {
+const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode}) => {
 
     if (isFetching) return <Preloader/>;
 
     if (!data) return <Redirect to="/"/>;
 
     return <>
-        {editMode && <EditModal closeModal={() => setEditMode(false)}/>}
+        {editMode && <EditModalContainer/>}
         <MainPage data={data!} />
         </>
 };
@@ -28,9 +29,8 @@ const mapStateToProps  = (state: AppState) => {
     }
 };
 
-const dispatchProps = {setEditMode: TableActions.setEditMode};
 
-export default connect(mapStateToProps, dispatchProps)(MainPageContainer);
+export default connect(mapStateToProps)(MainPageContainer);
 
 type MapStateProps = {
     data: TableData | null
@@ -38,9 +38,5 @@ type MapStateProps = {
     editMode: boolean
 }
 
-type MapDispatchProps = {
-    setEditMode: (value: boolean) => void
-}
-
-type Props = MapStateProps & MapDispatchProps
+type Props = MapStateProps
 

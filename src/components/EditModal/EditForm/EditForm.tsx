@@ -5,7 +5,7 @@ import c from "./EditForm.module.scss"
 import {TableItem} from "../../../types/types";
 import {required} from "../../../utils/validators";
 
-const EditForm: React.FC<InjectedFormProps<EditFormValues>> = ({handleSubmit, invalid}) => {
+const EditForm: React.FC<InjectedFormProps<TableItem>> = ({handleSubmit, invalid}) => {
 
     return <form onSubmit={handleSubmit} className={c.form}>
         <Field name="id" placeholder="id" component="input" validate={[required]}/>
@@ -17,6 +17,5 @@ const EditForm: React.FC<InjectedFormProps<EditFormValues>> = ({handleSubmit, in
     </form>
 };
 
-export default reduxForm<EditFormValues>({form: "edit-form"})(EditForm)
+export default reduxForm<TableItem>({form: "edit-form"})(EditForm)
 
-type EditFormValues = TableItem;

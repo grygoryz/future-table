@@ -6,11 +6,11 @@ import TableRow from "./TableRow/TableRow";
 type Props = {
     data: TableData
 }
-
+// повторяются ли id в данных?
 const Table: React.FC<Props> = ({data}) => {
     return (
         <div className={c.container}>
-            <table>
+            <table className={c.table}>
                 <tr>
                     <th>id</th>
                     <th>firstName</th>
@@ -18,7 +18,7 @@ const Table: React.FC<Props> = ({data}) => {
                     <th>email</th>
                     <th>phone</th>
                 </tr>
-                {data.map(item => <TableRow item={item}/>)}
+                {data.map(item => <TableRow key={item.id} item={item}/>)}
             </table>
         </div>
     );

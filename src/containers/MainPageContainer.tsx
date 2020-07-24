@@ -5,12 +5,9 @@ import {AppState} from "../store/configureStore";
 import {TableData} from "../types/types";
 import Preloader from "../components/common/Preloader/Preloader";
 import { Redirect } from "react-router-dom";
-import EditModal from "../components/EditModal/EditModal";
-import {TableActions} from "../actions/TableActions";
 import EditModalContainer from "./EditModalContainer";
 
 const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode}) => {
-
     if (isFetching) return <Preloader/>;
 
     if (!data) return <Redirect to="/"/>;

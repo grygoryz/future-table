@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  align-items: flex-start;
+
+  & input {
+    min-width: 400px;
+    font-size: 22px;
+    margin-right: 5px;
+  }
+}

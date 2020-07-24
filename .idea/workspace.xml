@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c889fa83-0eb1-409e-9d2c-5815b437850c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/EditModalContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/search-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterForm/FilterForm.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FilterForm/FilterForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SearchButton/SearchButton.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/SearchButton/SearchButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditModal/EditForm/EditForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditModal/EditForm/EditForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditModal/EditModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditModal/EditModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/table-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/table-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -35,12 +42,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="ts.external.directory.path" value="D:\web-projects\react\future-table\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web-projects\react\future-table\src\assets" />
       <recent name="D:\web-projects\react\future-table\src\components\common" />
       <recent name="D:\web-projects\react\future-table\src\components\SelectPage" />
       <recent name="D:\web-projects\react\future-table\src" />
@@ -57,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595586039681</updated>
-      <workItem from="1595586042195" duration="28149000" />
+      <workItem from="1595586042195" duration="30622000" />
     </task>
     <servers />
   </component>
@@ -65,6 +73,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1595616534125">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595616534125" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595611106863">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

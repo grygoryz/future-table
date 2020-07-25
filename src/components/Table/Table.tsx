@@ -12,9 +12,10 @@ type Props = {
     paginationConfig: PaginationConfig
     turnPage: (isNext: boolean) => void
     selectItem: (item: TableItem) => void
+    selectedItem: TableItem | null
 }
 
-const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig, turnPage, selectItem}) => {
+const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig, turnPage, selectItem, selectedItem}) => {
     const {startIndex, pageSize} = paginationConfig;
     const endIndex = startIndex + pageSize;
 
@@ -47,7 +48,11 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
                 </thead>
                 <tbody>
                 {data.slice(startIndex, endIndex + 1)
-                    .map((item, idx) => <TableRow onClick={() => selectItem(item)} key={idx} item={item}/>)}
+                    .map((item, idx) => <TableRow
+                        onClick={() => selectItem(item)}
+                        key={idx}
+                        selected={selectedItem === item}
+                        item={item}/>)}
                 </tbody>
             </table>
         </div>

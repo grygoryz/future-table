@@ -1,0 +1,22 @@
+.container {
+  margin-top: 20px;
+  width: 400px;
+  font-size: 18px;
+  border: 1px solid gray;
+  padding: 5px;
+
+  & > div {
+    margin-bottom: 5px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-flow: column;
+
+  & textarea {
+    resize: none;
+    margin-top: 5px;
+    min-height: 100px;
+  }
+}

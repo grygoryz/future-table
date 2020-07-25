@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import c from "./Table.module.scss";
 import cn from "classnames"
 import {PaginationConfig, SortConfig, TableData, TableItem} from "../../types/types";
@@ -21,7 +21,6 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
 
     const totalCount = data.length;
 
-
     const getClassName = (key: string) => {
         if (!sortConfig) return;
         return sortConfig.key === key ? c[sortConfig.direction] : undefined;
@@ -29,7 +28,7 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
 
     return (
         <div className={c.container}>
-            <div className={c.control}>
+            <div className={c.topPanel}>
                 <div className={c.info}>{startIndex}-{endIndex} of {totalCount}</div>
                 <button className={cn(c.button, c.prevButton)} onClick={() => turnPage(false)}
                         disabled={startIndex - pageSize < 0}><span/></button>

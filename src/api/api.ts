@@ -2,7 +2,7 @@ import axios from "axios"
 import {TableData} from "../types/types";
 
 const instance = axios.create({
-    baseURL: "http://www.filltext.com/",
+    baseURL: "http://www.filltext.com",
 });
 
 const DEFAULT_PARAMS = {

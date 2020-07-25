@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c889fa83-0eb1-409e-9d2c-5815b437850c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tests/table-reducer.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/AppActions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/PopUp/PopUp.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/PopUp/PopUp.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/AppContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducers/app-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/TableActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/TableActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -35,15 +43,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/common" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="ts.external.directory.path" value="D:\web-projects\react\future-table\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\web-projects\react\future-table\src\assets" />
       <recent name="D:\web-projects\react\future-table\src\components\common" />
+      <recent name="D:\web-projects\react\future-table\src\assets" />
       <recent name="D:\web-projects\react\future-table\src\components\SelectPage" />
       <recent name="D:\web-projects\react\future-table\src" />
       <recent name="D:\web-projects\react\future-table\src\components" />
@@ -132,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595586039681</updated>
-      <workItem from="1595586042195" duration="65928000" />
+      <workItem from="1595586042195" duration="68117000" />
     </task>
     <servers />
   </component>
@@ -151,22 +159,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state width="1345" height="497" key="GridCell.Tab.0.bottom" timestamp="1595702257256">
+    <state width="1345" height="170" key="GridCell.Tab.0.bottom" timestamp="1595704918112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="497" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595702257256" />
-    <state width="1345" height="497" key="GridCell.Tab.0.center" timestamp="1595702257256">
+    <state width="1345" height="170" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595704918112" />
+    <state width="1345" height="170" key="GridCell.Tab.0.center" timestamp="1595704918112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="497" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595702257256" />
-    <state width="1345" height="497" key="GridCell.Tab.0.left" timestamp="1595702257255">
+    <state width="1345" height="170" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595704918112" />
+    <state width="1345" height="170" key="GridCell.Tab.0.left" timestamp="1595704918112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="497" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595702257255" />
-    <state width="1345" height="497" key="GridCell.Tab.0.right" timestamp="1595702257256">
+    <state width="1345" height="170" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595704918112" />
+    <state width="1345" height="170" key="GridCell.Tab.0.right" timestamp="1595704918112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="497" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595702257256" />
+    <state width="1345" height="170" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595704918112" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1595616534125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

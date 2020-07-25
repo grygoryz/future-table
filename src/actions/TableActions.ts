@@ -1,6 +1,7 @@
 import {BaseThunkType, InferredActionTypes} from "../store/configureStore";
 import {TableData, TableItem, DatasetSize, SortConfig} from "../types/types";
 import {API} from "../api/api";
+import {handleError} from "./AppActions";
 
 export const FETCH_DATA = "FETCH_DATA";
 export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
@@ -30,7 +31,8 @@ export const getData = (size: DatasetSize): Thunk => async (dispatch) => {
         const data = await API.getData(size);
         dispatch(TableActions.fetchDataSuccess(data))
     } catch (e) {
-        dispatch(TableActions.fetchDataFailure())
+        dispatch(TableActions.fetchDataFailure());
+        dispatch(handleError(e))
     }
 };
 

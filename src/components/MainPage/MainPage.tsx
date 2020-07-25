@@ -1,19 +1,21 @@
 import React from "react";
 import c from "./MainPage.module.scss";
 import Table from "../Table/Table";
-import {TableData} from "../../types/types";
+import {SortConfig, TableData} from "../../types/types";
 import FilterForm, {FilterFormValues} from "../FilterForm/FilterForm";
 
 type Props = {
     data: TableData
     onSubmit: (formData: FilterFormValues) => void
+    requestSort: (key: string) => void
+    sortConfig: SortConfig | null
 }
 
-const MainPage: React.FC<Props> = ({data, onSubmit}) => {
+const MainPage: React.FC<Props> = ({data, onSubmit, requestSort, sortConfig}) => {
     return (
         <div className={c.container}>
             <FilterForm onSubmit={onSubmit}/>
-            <Table data={data} />
+            <Table data={data} requestSort={requestSort} sortConfig={sortConfig}/>
         </div>
     );
 };

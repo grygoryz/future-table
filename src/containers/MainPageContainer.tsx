@@ -2,38 +2,50 @@ import React from "react";
 import {connect} from "react-redux";
 import MainPage from "../components/MainPage/MainPage";
 import {AppState} from "../store/configureStore";
-import {TableData} from "../types/types";
+import {SortConfig, TableData} from "../types/types";
 import Preloader from "../components/common/Preloader/Preloader";
 import {Redirect} from "react-router-dom";
 import EditModalContainer from "./EditModalContainer";
 import {TableActions} from "../actions/TableActions";
-import {getFilteredData} from "../selectors/table-selectors";
+import {getFilteredData, getSortedData, getSuitableData} from "../selectors/table-selectors";
 import {FilterFormValues} from "../components/FilterForm/FilterForm";
 
-const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode, setFilterKey}) => {
-    if (isFetching) return <Preloader/>;
-
-    if (!data) return <Redirect to="/"/>;
+const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode, setFilterKey, sortConfig, setSortConfig}) => {
 
     const onSubmit = (formData: FilterFormValues) => {
         setFilterKey(formData.filterKey || "");
     };
 
+    const requestSort = (key: string) => {
+        const direction = sortConfig && sortConfig.key === key && sortConfig.direction === 'asc' ? "desc" : "asc";
+        setSortConfig({key, direction});
+    };
+
+    if (isFetching) return <Preloader/>;
+
+    if (!data) return <Redirect to="/"/>;
+
     return <>
         {editMode && <EditModalContainer/>}
-        <MainPage onSubmit={onSubmit} data={data!}/>
+        <MainPage
+            data={data}
+            onSubmit={onSubmit}
+            requestSort={requestSort}
+            sortConfig={sortConfig}
+        />
     </>
 };
 
 const mapStateToProps = (state: AppState) => {
     return {
-        data: getFilteredData(state),
+        data: getSuitableData(state),
         isFetching: state.table.isFetching,
-        editMode: state.table.editMode
+        editMode: state.table.editMode,
+        sortConfig: state.table.sortConfig
     }
 };
 
-const dispatchProps = {setFilterKey: TableActions.setFilterKey};
+const dispatchProps = {setFilterKey: TableActions.setFilterKey, setSortConfig: TableActions.setSortConfig};
 
 export default connect(mapStateToProps, dispatchProps)(MainPageContainer);
 
@@ -41,10 +53,12 @@ type MapStateProps = {
     data: TableData | null
     isFetching: boolean
     editMode: boolean
+    sortConfig: SortConfig | null
 }
 
 type MapDispatchProps = {
     setFilterKey: (key: string) => void
+    setSortConfig: (config: SortConfig) => void
 }
 
 type Props = MapStateProps & MapDispatchProps

@@ -8,10 +8,51 @@
     border: 1px solid black;
   }
 
-  th, td {
+  td {
     padding: 5px;
   }
 }
 
+.tableHeader {
+  padding: 8px 30px;
+  background-color: #ededed;
+  cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid black;
+    opacity: 0.1;
+    transition: 0.1s;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0.5;
+    }
+  }
+
+  &.asc {
+    &:after {
+      border-bottom: none;
+      border-top: 10px solid black;
+      opacity: 1;
+    }
+  }
+
+  &.desc {
+    &:after {
+      opacity: 1
+    }
+  }
+}
 
 

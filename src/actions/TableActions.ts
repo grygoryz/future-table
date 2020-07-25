@@ -1,5 +1,5 @@
 import {BaseThunkType, InferredActionTypes} from "../store/configureStore";
-import {TableData, TableItem, DatasetSize} from "../types/types";
+import {TableData, TableItem, DatasetSize, SortDirections, SortConfig} from "../types/types";
 import {API} from "../api/api";
 
 export const FETCH_DATA = "FETCH_DATA";
@@ -8,6 +8,7 @@ export const FETCH_DATA_FAILURE = "FETCH_DATA_FAILURE";
 export const ADD_ITEM = "ADD_ITEM";
 export const SET_EDIT_MODE = "SET_EDIT_MODE";
 export const SET_FILTER_KEY = "SET_FILTER_KEY";
+export const SET_SORT_CONFIG = "SET_SORTING_CONFIG";
 
 export const TableActions = {
     fetchData: () => ({type: FETCH_DATA} as const),
@@ -15,7 +16,8 @@ export const TableActions = {
     fetchDataFailure: () => ({type: FETCH_DATA_FAILURE} as const),
     setEditMode: (value: boolean) => ({type: SET_EDIT_MODE, value} as const),
     addItem: (item: TableItem) => ({type: ADD_ITEM, item} as const),
-    setFilterKey: (key: string) => ({type: SET_FILTER_KEY, key} as const)
+    setFilterKey: (key: string) => ({type: SET_FILTER_KEY, key} as const),
+    setSortConfig: (config: SortConfig) => ({type: SET_SORT_CONFIG, config} as const)
 };
 
 export const getData = (size: DatasetSize): Thunk => async (dispatch) => {

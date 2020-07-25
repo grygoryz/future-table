@@ -18,3 +18,10 @@ export type TableItem = {
 export type TableData = Array<TableItem>
 
 export type DatasetSize = "big" | "small";
+
+export type SortDirections = "asc" | "desc";
+
+export type SortConfig = {
+    key: string
+    direction: SortDirections
+}

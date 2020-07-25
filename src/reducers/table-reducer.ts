@@ -7,7 +7,8 @@ import {
     FETCH_DATA_SUCCESS,
     SET_EDIT_MODE,
     SET_FILTER_KEY,
-    SET_SORT_CONFIG
+    SET_SORT_CONFIG,
+    TURN_PAGE
 } from "../actions/TableActions";
 
 export const tableHeaders = ["id", "firstName", "lastName", "email", "phone"];
@@ -17,11 +18,15 @@ const initialState = {
     isFetching: false,
     editMode: false,
     filterKey: "",
-    sortConfig: null as null | SortConfig
+    sortConfig: null as null | SortConfig,
+    paginationConfig: {
+        pageSize: 15,
+        startIndex: 0
+    }
 };
 
 export const tableReducer = (state = initialState, action: ActionsType): State => {
-    switch(action.type) {
+    switch (action.type) {
         case FETCH_DATA: {
             return {...state, isFetching: true}
         }
@@ -38,10 +43,20 @@ export const tableReducer = (state = initialState, action: ActionsType): State =
             return {...state, data: [action.item, ...state.data!]}
         }
         case SET_FILTER_KEY: {
-            return {...state, filterKey: action.key}
+            return {...state, filterKey: action.key, paginationConfig: {...state.paginationConfig, startIndex: 0}}
         }
         case SET_SORT_CONFIG: {
-            return {...state, sortConfig: action.config}
+            return {...state, sortConfig: action.config, paginationConfig: {...state.paginationConfig, startIndex: 0}}
+        }
+        case TURN_PAGE: {
+            const {startIndex, pageSize} = state.paginationConfig;
+            return {
+                ...state,
+                paginationConfig: {
+                    ...state.paginationConfig,
+                    startIndex: action.isNext ? startIndex + pageSize : startIndex - pageSize
+                }
+            }
         }
         default:
             return state;

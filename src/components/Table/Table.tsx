@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import c from "./Table.module.scss";
 import cn from "classnames"
-import {SortConfig, TableData} from "../../types/types";
+import {PaginationConfig, SortConfig, TableData} from "../../types/types";
 import TableRow from "./TableRow/TableRow";
 import {tableHeaders} from "../../reducers/table-reducer";
 
@@ -9,9 +9,17 @@ type Props = {
     data: TableData
     requestSort: (key: string) => void
     sortConfig: SortConfig | null
+    paginationConfig: PaginationConfig
+    turnPage: (isNext: boolean) => void
 }
 
-const Table: React.FC<Props> = ({data, requestSort, sortConfig}) => {
+const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig, turnPage}) => {
+    const {startIndex, pageSize} = paginationConfig;
+    const endIndex = startIndex + pageSize;
+
+    const totalCount = data.length;
+
+
     const getClassName = (key: string) => {
         if (!sortConfig) return;
         return sortConfig.key === key ? c[sortConfig.direction] : undefined;
@@ -30,9 +38,11 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig}) => {
                 </tr>
                 </thead>
                 <tbody>
-                {data.map((item, idx) => <TableRow key={idx} item={item}/>)}
+                {data.slice(startIndex, endIndex + 1).map((item, idx) => <TableRow key={idx} item={item}/>)}
                 </tbody>
             </table>
+            <button onClick={() => turnPage(false)} disabled={startIndex - pageSize <= 0}>prev</button>
+            <button onClick={() => turnPage(true)} disabled={startIndex + pageSize > totalCount}>next</button>
         </div>
     );
 };

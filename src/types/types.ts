@@ -25,3 +25,8 @@ export type SortConfig = {
     key: string
     direction: SortDirections
 }
+
+export type PaginationConfig = {
+    pageSize: number
+    startIndex: number
+}

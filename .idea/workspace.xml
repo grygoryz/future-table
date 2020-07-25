@@ -4,13 +4,10 @@
     <list default="true" id="c889fa83-0eb1-409e-9d2c-5815b437850c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/actions/TableActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/TableActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/table-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/table-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/selectors/table-selectors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/selectors/table-selectors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595586039681</updated>
-      <workItem from="1595586042195" duration="47771000" />
+      <workItem from="1595586042195" duration="52271000" />
     </task>
     <servers />
   </component>
@@ -75,9 +72,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595616534125" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595670245921">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595682672302">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595670245921" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595682672302" />
   </component>
 </project>

@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import MainPage from "../components/MainPage/MainPage";
 import {AppState} from "../store/configureStore";
-import {SortConfig, TableData} from "../types/types";
+import {PaginationConfig, SortConfig, TableData} from "../types/types";
 import Preloader from "../components/common/Preloader/Preloader";
 import {Redirect} from "react-router-dom";
 import EditModalContainer from "./EditModalContainer";
@@ -10,7 +10,8 @@ import {TableActions} from "../actions/TableActions";
 import {getFilteredData, getSortedData, getSuitableData} from "../selectors/table-selectors";
 import {FilterFormValues} from "../components/FilterForm/FilterForm";
 
-const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode, setFilterKey, sortConfig, setSortConfig}) => {
+const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode,
+                                                setFilterKey, sortConfig, setSortConfig, paginationConfig, turnPage}) => {
 
     const onSubmit = (formData: FilterFormValues) => {
         setFilterKey(formData.filterKey || "");
@@ -32,6 +33,8 @@ const MainPageContainer: React.FC<Props> = ({data, isFetching, editMode, setFilt
             onSubmit={onSubmit}
             requestSort={requestSort}
             sortConfig={sortConfig}
+            paginationConfig={paginationConfig}
+            turnPage={turnPage}
         />
     </>
 };
@@ -41,11 +44,16 @@ const mapStateToProps = (state: AppState) => {
         data: getSuitableData(state),
         isFetching: state.table.isFetching,
         editMode: state.table.editMode,
-        sortConfig: state.table.sortConfig
+        sortConfig: state.table.sortConfig,
+        paginationConfig: state.table.paginationConfig
     }
 };
 
-const dispatchProps = {setFilterKey: TableActions.setFilterKey, setSortConfig: TableActions.setSortConfig};
+const dispatchProps = {
+    setFilterKey: TableActions.setFilterKey,
+    setSortConfig: TableActions.setSortConfig,
+    turnPage: TableActions.turnPage
+};
 
 export default connect(mapStateToProps, dispatchProps)(MainPageContainer);
 
@@ -54,11 +62,13 @@ type MapStateProps = {
     isFetching: boolean
     editMode: boolean
     sortConfig: SortConfig | null
+    paginationConfig: PaginationConfig
 }
 
 type MapDispatchProps = {
     setFilterKey: (key: string) => void
     setSortConfig: (config: SortConfig) => void
+    turnPage: (isNext: boolean) => void
 }
 
 type Props = MapStateProps & MapDispatchProps

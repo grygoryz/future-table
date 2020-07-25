@@ -1,5 +1,5 @@
 import {BaseThunkType, InferredActionTypes} from "../store/configureStore";
-import {TableData, TableItem, DatasetSize, SortDirections, SortConfig} from "../types/types";
+import {TableData, TableItem, DatasetSize, SortConfig} from "../types/types";
 import {API} from "../api/api";
 
 export const FETCH_DATA = "FETCH_DATA";

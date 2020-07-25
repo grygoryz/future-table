@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c889fa83-0eb1-409e-9d2c-5815b437850c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/TableContainer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/table-reducer.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/TableActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/TableActions.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="SCSS File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -38,6 +37,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="ts.external.directory.path" value="D:\web-projects\react\future-table\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -49,6 +49,79 @@
       <recent name="D:\web-projects\react\future-table\src\components" />
     </key>
   </component>
+  <component name="RunManager" selected="Jest.table-reducer.test.ts">
+    <configuration name="filterKey should be with correct value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/tests/table-reducer.test.ts" />
+      <test-names>
+        <test-name value="filterKey should be with correct value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="sortConfig should be with correct value" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/tests/table-reducer.test.ts" />
+      <test-names>
+        <test-name value="sortConfig should be with correct value" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="startIndex should be with correct value when turning page" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/tests/table-reducer.test.ts" />
+      <test-names>
+        <test-name value="startIndex should be with correct value when turning page" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="startIndex should reset when sortConfig changed" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/tests/table-reducer.test.ts" />
+      <test-names>
+        <test-name value="startIndex should reset when sortConfig changed" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="table-reducer.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/tests/table-reducer.test.ts" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.table-reducer.test.ts" />
+        <item itemvalue="Jest.startIndex should be with correct value when turning page" />
+        <item itemvalue="Jest.startIndex should reset when sortConfig changed" />
+        <item itemvalue="Jest.sortConfig should be with correct value" />
+        <item itemvalue="Jest.filterKey should be with correct value" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -59,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595586039681</updated>
-      <workItem from="1595586042195" duration="59079000" />
+      <workItem from="1595586042195" duration="65928000" />
     </task>
     <servers />
   </component>
@@ -78,6 +151,22 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state width="1345" height="497" key="GridCell.Tab.0.bottom" timestamp="1595702257256">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="497" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595702257256" />
+    <state width="1345" height="497" key="GridCell.Tab.0.center" timestamp="1595702257256">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="497" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595702257256" />
+    <state width="1345" height="497" key="GridCell.Tab.0.left" timestamp="1595702257255">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="497" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595702257255" />
+    <state width="1345" height="497" key="GridCell.Tab.0.right" timestamp="1595702257256">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="497" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595702257256" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1595616534125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

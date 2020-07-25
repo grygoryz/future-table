@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c889fa83-0eb1-409e-9d2c-5815b437850c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/search-icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FilterForm/FilterForm.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/FilterForm/FilterForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/SearchButton/SearchButton.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/SearchButton/SearchButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/selectors/table-selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/object-helpers.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/TableActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/TableActions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainPage/MainPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/table-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/table-reducer.ts" afterDir="false" />
     </list>
@@ -23,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -65,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595586039681</updated>
-      <workItem from="1595586042195" duration="30622000" />
+      <workItem from="1595586042195" duration="38512000" />
     </task>
     <servers />
   </component>

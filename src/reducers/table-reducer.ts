@@ -5,16 +5,15 @@ import {
     FETCH_DATA,
     FETCH_DATA_FAILURE,
     FETCH_DATA_SUCCESS,
-    FILTER_BY_KEY,
-    SET_EDIT_MODE
+    SET_EDIT_MODE,
+    SET_FILTER_KEY
 } from "../actions/TableActions";
 
 const initialState = {
     data: null as null | TableData,
     isFetching: false,
     editMode: false,
-
-   // filterKey: null as null | string,
+    filterKey: "",
 };
 
 export const tableReducer = (state = initialState, action: ActionsType): State => {
@@ -34,16 +33,8 @@ export const tableReducer = (state = initialState, action: ActionsType): State =
         case ADD_ITEM: {
             return {...state, data: [action.item, ...state.data!]}
         }
-        case FILTER_BY_KEY: {
-            return {
-                ...state,
-                data: state.data!.filter(item => {
-                    for (let prop in item) {
-                        if (prop.includes(action.key)) return true;
-                    }
-                    return false
-                })
-            }
+        case SET_FILTER_KEY: {
+            return {...state, filterKey: action.key}
         }
         default:
             return state;

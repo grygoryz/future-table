@@ -10,6 +10,7 @@ export const SET_EDIT_MODE = "SET_EDIT_MODE";
 export const SET_FILTER_KEY = "SET_FILTER_KEY";
 export const SET_SORT_CONFIG = "SET_SORTING_CONFIG";
 export const TURN_PAGE = "TURN_PAGE";
+export const SELECT_ITEM = "SELECT_ITEM";
 
 export const TableActions = {
     fetchData: () => ({type: FETCH_DATA} as const),
@@ -19,7 +20,8 @@ export const TableActions = {
     addItem: (item: TableItem) => ({type: ADD_ITEM, item} as const),
     setFilterKey: (key: string) => ({type: SET_FILTER_KEY, key} as const),
     setSortConfig: (config: SortConfig) => ({type: SET_SORT_CONFIG, config} as const),
-    turnPage: (isNext: boolean) => ({type: TURN_PAGE, isNext} as const)
+    turnPage: (isNext: boolean) => ({type: TURN_PAGE, isNext} as const),
+    selectItem: (item: TableItem) => ({type: SELECT_ITEM, item} as const)
 };
 
 export const getData = (size: DatasetSize): Thunk => async (dispatch) => {

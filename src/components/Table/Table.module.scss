@@ -2,7 +2,7 @@
 
   table {
     border-collapse: collapse;
-    min-width: 900px;
+    min-width: 850px;
 
   }
 
@@ -12,6 +12,7 @@
 
   td {
     padding: 5px;
+    text-align: center;
   }
 }
 
@@ -54,6 +55,73 @@
     &:after {
       opacity: 1
     }
+  }
+}
+
+.control {
+  border: 1px solid black;
+  border-bottom: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+}
+
+.info {
+  margin-right: 10px;
+}
+
+.button {
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.2s;
+
+  &:first-of-type {
+    margin-right: 5px;
+  }
+
+  &:disabled {
+    & span {
+      border-color: #c4c4c4;
+    }
+  }
+
+  & span {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-style: solid;
+    border-color: #797979;
+    top: 50%;
+    left: 50%;
+  }
+
+  &:hover {
+    background-color: #efefef;
+  }
+}
+
+.prevButton {
+  & span {
+    border-right: 2px;
+    border-top: 2px;
+    transform: translate(-30%, -50%) rotate(45deg);
+  }
+}
+
+.nextButton {
+  & span {
+    border-left: 2px;
+    border-bottom: 2px;
+    transform: translate(-60%, -50%) rotate(45deg);
   }
 }
 

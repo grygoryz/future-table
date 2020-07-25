@@ -1,4 +1,4 @@
-import {TableData, SortConfig} from "../types/types";
+import {TableData, SortConfig, TableItem} from "../types/types";
 import {
     ActionsType,
     ADD_ITEM,
@@ -8,7 +8,8 @@ import {
     SET_EDIT_MODE,
     SET_FILTER_KEY,
     SET_SORT_CONFIG,
-    TURN_PAGE
+    TURN_PAGE,
+    SELECT_ITEM
 } from "../actions/TableActions";
 
 export const tableHeaders = ["id", "firstName", "lastName", "email", "phone"];
@@ -16,6 +17,7 @@ export const tableHeaders = ["id", "firstName", "lastName", "email", "phone"];
 const initialState = {
     data: null as null | TableData,
     isFetching: false,
+    selectedItem: null as null | TableItem,
     editMode: false,
     filterKey: "",
     sortConfig: null as null | SortConfig,
@@ -38,6 +40,9 @@ export const tableReducer = (state = initialState, action: ActionsType): State =
         }
         case SET_EDIT_MODE: {
             return {...state, editMode: action.value}
+        }
+        case SELECT_ITEM: {
+            return {...state, selectedItem: action.item}
         }
         case ADD_ITEM: {
             return {...state, data: [action.item, ...state.data!]}

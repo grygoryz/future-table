@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import c from "./Table.module.scss";
 import cn from "classnames"
-import {PaginationConfig, SortConfig, TableData} from "../../types/types";
+import {PaginationConfig, SortConfig, TableData, TableItem} from "../../types/types";
 import TableRow from "./TableRow/TableRow";
 import {tableHeaders} from "../../reducers/table-reducer";
 
@@ -11,9 +11,10 @@ type Props = {
     sortConfig: SortConfig | null
     paginationConfig: PaginationConfig
     turnPage: (isNext: boolean) => void
+    selectItem: (item: TableItem) => void
 }
 
-const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig, turnPage}) => {
+const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig, turnPage, selectItem}) => {
     const {startIndex, pageSize} = paginationConfig;
     const endIndex = startIndex + pageSize;
 
@@ -27,6 +28,13 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
 
     return (
         <div className={c.container}>
+            <div className={c.control}>
+                <div className={c.info}>{startIndex}-{endIndex} of {totalCount}</div>
+                <button className={cn(c.button, c.prevButton)} onClick={() => turnPage(false)}
+                        disabled={startIndex - pageSize < 0}><span/></button>
+                <button className={cn(c.button, c.nextButton)} onClick={() => turnPage(true)}
+                        disabled={startIndex + pageSize > totalCount}><span/></button>
+            </div>
             <table className={c.table}>
                 <thead>
                 <tr>
@@ -38,11 +46,10 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
                 </tr>
                 </thead>
                 <tbody>
-                {data.slice(startIndex, endIndex + 1).map((item, idx) => <TableRow key={idx} item={item}/>)}
+                {data.slice(startIndex, endIndex + 1)
+                    .map((item, idx) => <TableRow onClick={() => selectItem(item)} key={idx} item={item}/>)}
                 </tbody>
             </table>
-            <button onClick={() => turnPage(false)} disabled={startIndex - pageSize <= 0}>prev</button>
-            <button onClick={() => turnPage(true)} disabled={startIndex + pageSize > totalCount}>next</button>
         </div>
     );
 };

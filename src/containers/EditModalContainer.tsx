@@ -3,6 +3,7 @@ import EditModal from "../components/EditModal/EditModal";
 import React from "react";
 import {TableActions} from "../actions/TableActions";
 import {TableItem} from "../types/types";
+import {AppState} from "../store/configureStore";
 
 const EditModalContainer: React.FC<Props> = ({setEditMode, addItem}) => {
 
@@ -18,7 +19,7 @@ const EditModalContainer: React.FC<Props> = ({setEditMode, addItem}) => {
 
 const dispatchProps = {setEditMode: TableActions.setEditMode, addItem: TableActions.addItem};
 
-export default connect(null, dispatchProps)(EditModalContainer)
+export default connect<{}, MapDispatchProps, {}, AppState>(null, dispatchProps)(EditModalContainer)
 
 type MapDispatchProps = {
     setEditMode: (value: boolean) => void

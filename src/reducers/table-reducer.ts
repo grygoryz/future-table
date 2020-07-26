@@ -22,7 +22,7 @@ const initialState = {
     filterKey: "",
     sortConfig: null as null | SortConfig,
     paginationConfig: {
-        pageSize: 15,
+        pageSize: 35,
         startIndex: 0
     }
 };

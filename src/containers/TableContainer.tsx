@@ -45,7 +45,7 @@ const dispatchProps = {
     selectItem: TableActions.selectItem
 };
 
-export default connect(mapStateToProps, dispatchProps)(TableContainer);
+export default connect<MapStateProps, MapDispatchProps, {}, AppState>(mapStateToProps, dispatchProps)(TableContainer);
 
 type MapStateProps = {
     data: TableData | null

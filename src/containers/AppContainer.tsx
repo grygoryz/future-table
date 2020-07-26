@@ -9,7 +9,7 @@ const mapStateToProps = (state: AppState) => {
     }
 };
 
-export default connect(mapStateToProps)(App)
+export default connect<MapStateProps, {}, {}, AppState>(mapStateToProps)(App)
 
 type MapStateProps = {
     error: Error | null

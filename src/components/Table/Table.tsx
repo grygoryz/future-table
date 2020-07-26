@@ -4,6 +4,8 @@ import cn from "classnames"
 import {PaginationConfig, SortConfig, TableData, TableItem} from "../../types/types";
 import TableRow from "./TableRow/TableRow";
 import {tableHeaders} from "../../reducers/table-reducer";
+import {animated} from "react-spring";
+import {useScaleAnimation} from "../../hooks/animation-hooks";
 
 type Props = {
     data: TableData
@@ -16,10 +18,11 @@ type Props = {
 }
 
 const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig, turnPage, selectItem, selectedItem}) => {
-    const {startIndex, pageSize} = paginationConfig;
-    const endIndex = startIndex + pageSize;
+    const zoomIn = useScaleAnimation(0.9, 1);
 
+    const {startIndex, pageSize} = paginationConfig;
     const totalCount = data.length;
+    const endIndex = startIndex + pageSize >= totalCount ? totalCount : startIndex + pageSize;
 
     const getClassName = (key: string) => {
         if (!sortConfig) return;
@@ -27,9 +30,9 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
     };
 
     return (
-        <div className={c.container}>
+        <animated.div style={zoomIn} className={c.container}>
             <div className={c.topPanel}>
-                <div className={c.info}>{startIndex}-{endIndex} of {totalCount}</div>
+                <div className={c.info}>{startIndex + 1}-{endIndex} of {totalCount}</div>
                 <button className={cn(c.button, c.prevButton)} onClick={() => turnPage(false)}
                         disabled={startIndex - pageSize < 0}><span/></button>
                 <button className={cn(c.button, c.nextButton)} onClick={() => turnPage(true)}
@@ -54,7 +57,7 @@ const Table: React.FC<Props> = ({data, requestSort, sortConfig, paginationConfig
                         item={item}/>)}
                 </tbody>
             </table>
-        </div>
+        </animated.div>
     );
 };
 

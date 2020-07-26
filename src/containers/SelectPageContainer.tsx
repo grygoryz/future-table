@@ -19,7 +19,7 @@ const SelectPageContainer: React.FC<Props> = ({getData}) => {
 };
 
 export default connect<{}, MapDispatchProps, {}, AppState>(null, {getData})(SelectPageContainer);
-// мб в блл перенести
+
 type MapDispatchProps = {
     getData: (size: DatasetSize) => void
 }

@@ -34,7 +34,7 @@ const dispatchProps = {
     setFilterKey: TableActions.setFilterKey,
 };
 
-export default connect(mapStateToProps, dispatchProps)(MainPageContainer);
+export default connect<MapStateProps, MapDispatchProps, {}, AppState>(mapStateToProps, dispatchProps)(MainPageContainer);
 
 type MapStateProps = {
     selectedItem: TableItem | null

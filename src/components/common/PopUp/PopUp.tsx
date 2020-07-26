@@ -8,9 +8,7 @@ type Props = {
 
 const PopUp: React.FC<Props> = ({content}) => {
     const props = useSpring({
-        from: {
-            transform: "translateY(-100%) scale(0.8)"
-        },
+        from: {transform: "translateY(-100%) scale(0.8)"},
         transform: "translateY(0%) scale(1)",
         config: config.wobbly
     });

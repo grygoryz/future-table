@@ -7,3 +7,13 @@ export const useScaleAnimation = (from: number, to: number) => {
         config: config.wobbly
     });
 };
+
+export const useFadeInAnimation = () => {
+    return useSpring({
+        from: {opacity: 0},
+        opacity: 1,
+        config: {
+            duration: 150
+        }
+    });
+};

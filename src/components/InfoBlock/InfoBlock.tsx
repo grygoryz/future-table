@@ -14,7 +14,7 @@ const InfoBlock: React.FC<Props> = ({item}) => {
     return (
         <animated.div style={zoomIn} className={c.container}>
             <div>Chosen user <b>{item.firstName}</b></div>
-            <div className={c.description}>Description:<textarea readOnly={true}>{item.description}</textarea></div>
+            <div className={c.description}>Description:<textarea value={item.description} readOnly={true}/></div>
             {item.address && <>
                 <div>Address: <b>{item.address.streetAddress}</b></div>
                 <div>City: <b>{item.address.city}</b></div>

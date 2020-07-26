@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c889fa83-0eb1-409e-9d2c-5815b437850c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hooks/animation-hooks.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/InfoBlock/InfoBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/InfoBlock/InfoBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SelectPage/SelectPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectPage/SelectPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/PopUp/PopUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/PopUp/PopUp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/AppContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/AppContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/EditModalContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/EditModalContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HeaderContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/HeaderContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainPageContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/SelectPageContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/SelectPageContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/TableContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/TableContainer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/table-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/table-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +128,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595586039681</updated>
-      <workItem from="1595586042195" duration="71801000" />
+      <workItem from="1595586042195" duration="72084000" />
+      <workItem from="1595748286147" duration="1391000" />
     </task>
     <servers />
   </component>
@@ -152,13 +141,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="402" y="0" key="#Dockerfile" timestamp="1595748450021">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#Dockerfile/0.0.1366.728@0.0.1366.728" timestamp="1595748450021" />
+    <state x="431" y="167" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595748508727">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="431" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1595748508727" />
     <state width="1345" height="170" key="GridCell.Tab.0.bottom" timestamp="1595704918112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
